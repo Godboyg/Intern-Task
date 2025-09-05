@@ -22,7 +22,7 @@ const NewChat: React.FC = () => {
 
         <input
           type="text"
-          placeholder="Enter participant name"
+          placeholder="Enter participant name..."
           value={name}
           onChange={(e) => setName(e.target.value)}
           className="w-full text-white px-4 py-2 border rounded-xl mb-4 focus:outline-none focus:ring-2 focus:ring-cyan-500"
