@@ -60,7 +60,6 @@ const messages = [
         </button>
       </div>
 
-      {/* Results */}
       {(summary || smartReply) && (
         <div className="p-3 bg-black text-sm text-cyan-600 border-t">
           {summary && <p className="mb-2">{summary}</p>}
