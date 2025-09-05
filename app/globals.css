@@ -2,6 +2,7 @@
 
 body{
   background-color: black;
+  position: relative;
 }
 
 .over::-webkit-scrollbar-thumb{

@@ -1,7 +1,12 @@
 "use client"
 import React, { useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const NewChat: React.FC = () => {
+
+    const router = useRouter();
+
   const [name, setName] = useState("");
   const [icebreaker, setIcebreaker] = useState<string | null>(null);
 
@@ -13,6 +18,7 @@ const NewChat: React.FC = () => {
     if (!name) return alert("Please enter a participant name!");
     alert(`Starting chat with ${name}...`);
     setName("");
+    router.push("/chat-window");
   };
 
   return (
@@ -37,7 +43,7 @@ const NewChat: React.FC = () => {
           </button>
           <button
             onClick={handleStartChat}
-            className="flex-1 bg-blue-500 text-white px-4 py-2 rounded-xl hover:bg-blue-600 transition"
+            className="flex-1 bg-blue-500 text-white px-4 py-2 rounded-xl hover:cursor-pointer hover:bg-blue-600 transition"
           >
             Start Chat
           </button>
